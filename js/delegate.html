@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delegate</title>
+</head>
+<body>
+    <h1>Explore event delegate</h1>
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem ipsum dolor sit.</li>
+            <li class="item">A est eveniet quaerat!</li>
+            <li class="item">Quos aspernatur autem enim.</li>
+            <li class="item">Impedit nisi ducimus nihil.</li>
+            <li class="item">Veniam aliquam neque doloremque?</li>
+            <li class="item">Nostrum tempora nulla quisquam.</li>
+        </ul>
+        <button id="add-new-item">Add item</button>
+    </section>
+    <script>
+        const items = document.getElementById('list-container').addEventListener('click', function(event){
+                event.target.parentNode.removeChild(event.target);});
+        
+        document.getElementById('add-new-item').addEventListener('click', function(){
+            const listContainer = document.getElementById('list-container');
+            const li = document.createElement('li');
+            li.innerText = 'brand new item';
+            li.classList.add('item');
+            listContainer.appendChild(li);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>summary event handelers</title>
+</head>
+<body>
+    <button onclick="makeGreen()">Green</button>
+    <button id="make-yellow">yellow</button>
+    <br>
+    <input id="get-email" type="email">
+    <script>
+        function makeGreen()
+        {
+            document.body.style.backgroundColor = 'green';
+        }
+        document.getElementById('make-yellow').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'yellow';
+        })
+        document.getElementById('get-email').addEventListener('click', function(event){
+
+        })
+    </script>
+</body>
+</html>
